@@ -1,0 +1,19 @@
+{
+  "admin": [
+    "auth",
+    "user_app",
+    "",
+    "insert",
+    "basket"
+  ],
+  "unauthorized": [
+    "auth"
+  ],
+  "employee": [
+    "auth",
+    "user_app",
+    "",
+    "insert",
+    "basket"
+  ]
+}

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Выберите запрос</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+          integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+</head>
+</head>
+<body>
+<div class="container">
+    <div class="row" id="appSummary">
+        <div class="col text-center">
+            <h1>
+                Выберите запрос
+                <br>
+
+                <a class="btn btn-outline-dark" href="{{url_for('user_app.user_sql1')}}" role="button">Информация о
+                    билбордах подходящей стоимости</a>
+                <br>
+                <a class="btn btn-outline-dark" href="{{url_for('user_app.user_sql2')}}" role="button">Информация о
+                    билбордах подходящего размера</a>
+                <br>
+                <a class="btn btn-outline-dark" href="{{url_for('user_app.user_sql3')}}" role="button">Информация о
+                    конкретном клиенте</a>
+                <br>
+                <a class="btn btn-outline-dark" href="{{url_for('user_app.user_sql4')}}" role="button">Информация о
+                    итоговой и промежуточных суммах заказа</a>
+
+
+            </h1>
+            <a class="btn btn-outline-dark" href="/" role="button">Назад</a>
+        </div>
+    </div>
+</div>
+</body>
+
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Basket</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+          integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+</head>
+</head>
+{% import 'basket_utils.html' as utils %}
+<body>
+<div class="container" align="center">
+    <div class="row">
+        <div class="col-md-12">
+            <h3>Заказчик: <i>{{name}}</i></h3>
+            {% if basket %}
+            <h2>Оформленные заказы аренды</h2>
+            {% for item in basket %}
+            {{ utils.render_item(item, show_form=False) }}
+            {% endfor %}
+            {% endif %}
+            {% if not_basket %}
+            <h2>Ошибка! Данные билборды были ранее арендованы в указанные сроки</h2>
+            {% for item in not_basket %}
+            {{ utils.render_item(item, show_form=False) }}
+            {% endfor %}
+            {% endif %}
+            {% if (not basket) and (not not_basket) %}
+            <h2 align="center">Ваша корзина пуста</h2>
+            <a class="btn btn-outline-dark " href="/basket/order" role="button">Вернуться к оформлению заказа</a>
+            <p>
+            {% endif %}
+        </div>
+        <div class="col text-center">
+            <a class="btn btn-outline-dark " href="/" role="button">Главное меню</a>
+
+        </div>
+    </div>
+</div>
+</div>
+</body>
+</html>

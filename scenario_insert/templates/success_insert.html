@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Arendators</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+          integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+</head>
+</head>
+<body>
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css"
+      integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+<div class="container">
+    <div class="row" id="appSummary">
+        <div class="col text-center">
+            <h1>Вы успешно оформили договор долгосрочной аренды:</h1>
+
+            <table class="table table-bordered table-hover">
+                <thead class="thead-dark">
+                {% for k in data %}
+                <th>
+                    {{k}}
+                </th>
+                {% endfor %}
+                </thead>
+
+                <tr>
+                    {% for k in result %}
+                    <th>{{k}}</th>
+                    {% endfor %}
+                </tr>
+            </table>
+            <a class="btn btn-outline-dark" href="{{url_for('insert.insert')}}" role="button">Назад</a>
+        </div>
+    </div>
+</div>
+</body>
+</html>

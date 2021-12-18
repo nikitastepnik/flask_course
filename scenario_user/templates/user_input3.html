@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Services</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+          integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <style>select {
+text-align: center;
+text-align-last: center;
+padding-right: 29px;
+
+}
+    </style>
+</head>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+</head>
+<body>
+<div class="container">
+    <div class="row" id="appSummary">
+        <div class="col text-center">
+            <h3>
+                <caption>Выберите необходимого клиента:</caption>
+                <form action="" method="post">
+
+                    <select class="form-select" aria-label="Default select example" name="id">
+                        <p>
+                        {% for item in names %}
+                        <option value="{{item['ar_id']}}"> {{item['name']}} </option>
+                        <option disabled style="font-style:italic">&nbsp;&nbsp;&nbsp;{{item['telephone']}}</option>
+                            <p>
+                        {% endfor %}
+                    </select>
+
+
+                    <p><p>
+                    <input class="btn btn-outline-dark" type="submit" value="Получить детализацию о клиенте">
+                        <p>
+                    <p>
+                    <a class="btn btn-outline-dark" href="{{url_for('user_app.user_index')}}" role="button">Назад</a>
+
+                </form>
+                <p>
+            </h3>
+
+        </div>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Fill inform. about bilboard</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+          integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+</head>
+</head>
+<body>
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css"
+      integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+<div class="container">
+    <div class="row" id="appSummary">
+        <div class="col text-center">
+            <h2>Вы успешно внесли в базу следующую информацию о клиенте:</h2>
+            <table class="table table-bordered table-hover">
+                <thead class="thead-dark">
+
+                {% for k in data %}
+                <th>
+                    {{k}}
+                </th>
+                {% endfor %}
+                </thead>
+                <thead>
+                {% for k in res %}
+                <th>
+                    {{k['name']}}
+                </th>
+                <th>
+                    {{k['telephone']}}
+                </th>
+                </thead>
+                {% endfor %}
+            </table>
+            <h2>
+                <p>
+                    <a class="btn btn-outline-dark" href="{{url_for('insert.client')}}" role="button">Назад</a>
+                <p>
+                    <a class="btn btn-outline-dark" href="/" role="button">В главное меню</a>
+
+            </h2>
+
+
+        </div>
+    </div>
+</div>
+</body>
+</html>

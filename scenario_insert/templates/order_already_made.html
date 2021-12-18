@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Order_input</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+          integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+</head>
+</head>
+<body>
+<div class="container">
+    <div class="row" id="appSummary">
+        <div class="col text-center">
+            <h1>На данного клиента ранее был оформлен следующий договор:</h1>
+            <br>
+            <table class="table table-bordered table-hover">
+                <thead class="thead-dark">
+                {% for k in data %}
+                <th>
+                    {{k}}
+                </th>
+                {% endfor %}
+                </thead>
+                <tr>
+                    {% for k in result %}
+                    <th>{{k}}</th>
+                    {% endfor %}
+                </tr>
+            </table>
+            <h2>
+                <a class="btn btn-outline-dark" href="{{url_for('insert.insert')}}" role="button">Назад</a>
+                <br>
+                <a class="btn btn-outline-dark" href="/" role="button">Главное меню</a>
+            </h2>
+        </div>
+    </div>
+</div>
+</body>
+</html>

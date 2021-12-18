@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Basket</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+          integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+</head>
+
+{% import 'basket_utils.html' as utils %}
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-md-5">
+            <h2>Билборды в системе</h2>
+            {% if items %}
+            {% for item in items %}
+            {{ utils.render_item(item, show_form=True) }}
+            {% endfor %}
+            {% else %}
+            <p>Нет доступных товаров</p>
+            {% endif %}
+        </div>
+
+        <div class="col-md-5">
+            <h2>Выбранные билборды</h2>
+            {% if basket %}
+            {% for item in basket %}
+            {{ utils.render_item(item, show_form=False) }}
+
+            {% endfor %}
+            {% else %}
+            <p>Вы ничего не выбрали</p>
+            {% endif %}
+        </div>
+        <div class="col-md-2">
+            <h4>Заказчик: <br><i>{{name}}</i></h4>
+            <h2><a class="btn btn-outline-dark" style="height:60%" href="/basket/clear-basket" role="button">Очистить
+                выбранное</a>
+                <br>
+                <a class="btn btn-outline-dark" style="height:60%" href="buy" role="button">Оформить заказ</a>
+                <br>
+                <a class="btn btn-outline-dark" style="height:60%" href="/" role="button">Главное меню</a>
+
+            </h2>
+        </div>
+    </div>
+</div>
+</body>
+</html>

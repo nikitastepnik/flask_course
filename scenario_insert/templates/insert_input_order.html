@@ -7,9 +7,9 @@
           integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
 </head>
 <style>select {
-text-align: center;
-text-align-last: center;
-padding-right: 29px;
+    text-align: center;
+    text-align-last: center;
+    padding-right: 29px;
 
 }
 
@@ -27,7 +27,7 @@ padding-right: 29px;
                 <form action="" method="post">
 
                     <select class="form-select" aria-label="Default select example" name="id">
-                        
+
                         {% for item in names %}
                         <option value="{{item['ar_id']}}"> {{item['name']}} <br></option>
                         <option disabled style="font-style:italic">&nbsp;&nbsp;&nbsp;{{item['telephone']}}</option>

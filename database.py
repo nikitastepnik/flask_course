@@ -1,8 +1,7 @@
 import traceback
-
 from pymysql import connect
-from pymysql.err import OperationalError
 from pymysql.err import InterfaceError
+from pymysql.err import OperationalError
 from pymysql.err import ProgrammingError
 
 

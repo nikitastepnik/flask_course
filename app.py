@@ -1,13 +1,12 @@
 import json
-
 from flask import Flask, render_template, session
 
-from scenario_insert.routes import insert_app
-from sql_provider import SQL_Provider
-from scenario_user.routes import user_app
 from access import group_permission_decorator
 from scenario_auth.routes import auth_app
 from scenario_basket.routes import basket_app
+from scenario_insert.routes import insert_app
+from scenario_user.routes import user_app
+from sql_provider import SQL_Provider
 
 app = Flask(__name__)
 

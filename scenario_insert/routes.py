@@ -1,10 +1,9 @@
 from datetime import datetime
-
 from flask import Blueprint, render_template, current_app, request, redirect
 
-from sql_provider import SQL_Provider
-from database import work_with_db, work_with_db_insert
 from access import group_permission_decorator
+from database import work_with_db, work_with_db_insert
+from sql_provider import SQL_Provider
 
 insert_app = Blueprint('insert', __name__, template_folder='templates')
 provider = SQL_Provider('sql/')

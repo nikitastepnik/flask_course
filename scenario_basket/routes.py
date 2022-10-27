@@ -1,11 +1,10 @@
 import datetime
-
 from flask import Blueprint, render_template, current_app, request, session, redirect
 
-from sql_provider import SQL_Provider
-from database import work_with_db, work_with_db_transact
-from .utils import add_to_basket, clear_basket
 from access import group_permission_decorator
+from database import work_with_db, work_with_db_transact
+from sql_provider import SQL_Provider
+from .utils import add_to_basket, clear_basket
 
 basket_app = Blueprint('basket', __name__, template_folder='templates')
 provider = SQL_Provider('sql/')

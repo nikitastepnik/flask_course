@@ -1,1 +1,2 @@
-INSERT INTO `bilboard`.`arendator` (`name`, `telephone`, `ar_date`) VALUES ('$name', '$phone', curdate());
+INSERT INTO `bilboard`.`arendator` (`name`, `telephone`, `ar_date`)
+VALUES ('$name', '$phone', curdate());

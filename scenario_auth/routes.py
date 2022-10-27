@@ -1,8 +1,8 @@
 from flask import Blueprint, session, render_template, request, current_app
 
 from access import group_permission_decorator
-from sql_provider import SQL_Provider
 from database import work_with_db
+from sql_provider import SQL_Provider
 
 auth_app = Blueprint('auth', __name__, template_folder='templates')
 provider = SQL_Provider('sql/')
@@ -24,4 +24,3 @@ def login_page():
                 return render_template('success.html', login=login)
             else:
                 return render_template('invalid_login_or_password.html')
-

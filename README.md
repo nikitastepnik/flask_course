@@ -1,13 +1,9 @@
 # Разработка информационной системы «Рекламное агентство»
 
-Данный курсовой проект предполагает разработку Web-приложения,
-которое будет располагаться во внутренней сети заказчика, для предоставления
-услуг рекламного агентства.
-Для решения данной задачи использовались технологии:
-
-+ язык программирования Python 3.8
-+ СУБД MySQL
-+ язык гипертекстовой разметки страницы HTML 5
-+ стили CSS
-+ фреймворк Bootstrap
-+ фреймворк Flask
+This course project involves the development of a Web application that will be located on the customer’s internal network to provide advertising agency services. To solve this problem the following technologies were used:
++ Python 3.8 programming language;
++ Flask;
++ MySQL;
++ HTML 5;
++ CSS;
++ Bootstrap;
